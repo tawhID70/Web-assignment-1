@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    height: auto;
 }
 .azeret-mono-font {
     font-family: "Azeret Mono", monospace;
@@ -19,14 +20,16 @@ main{
 #banner {
     background-image: url(../assets/Hero-bg.png);
     width: 1400px;
-    /* height: 500px; */
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
  #banner .banner-img {
     width: 897px;
-    margin-top: 30px;
+    height: 450px;
+    margin-top: 0px;
+    margin-inline: auto;
 }
 #banner .banner-img .subtitle{
     color: rgb(13, 19, 33);
@@ -54,7 +57,7 @@ main{
     line-height: 14px;
     letter-spacing: 0%;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 .btn-container {
     text-align: center;
@@ -70,6 +73,7 @@ main{
     background-color: #0D1321;
     padding: 16px 19px 16px 19px;
     margin-bottom: 35px;
+    text-decoration: none;
 }
 /* frane style-------------------------------- */
 
@@ -128,11 +132,13 @@ main{
     text-align: left;
 
 }
-
+hr {
+    visibility: hidden;
+}
 #frame-2 .items {
     position: static;
     width: 850px;
-    height: 240px;
+    /* height: 240px; */
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -142,7 +148,7 @@ main{
 #frame-2 .items .item-td {
     position: static;
     width: 500px;
-    height: 160px;
+    /* height: 160px; */
     display: flex;
     text-align: left;
     font-size: ;
@@ -151,6 +157,7 @@ main{
     align-items: flex-start;
     margin: 0px 10px;
     gap: 15px;
+    justify-content: space-between;
 }
 #frame-2 .items .btn-container {
     color: rgb(13, 19, 33);
@@ -171,21 +178,18 @@ main{
     box-sizing: border-box;
     border: 1px solid rgb(13, 19, 33);
     opacity: 0.7;
-    padding: 12px 20px 12px 20px;
+    padding: 10px 30px 10px 30px;
 
 }
 .item-V {
+    height: 500px;
     text-align: center;
-    box-sizing: border-box;
-    border: 1px solid rgba(13, 19, 33, 0.2);
-    border-radius: 16px;
+    justify-content: center;
+    display: flex;
 }
 /* .skills--------- */
 .skills {
     width: 1100px;
-    /* position: static; */
-/* width: 1140px; */
-/* height: 463px; */
 justify-content: center;
 }
 .skills-container {
@@ -206,22 +210,27 @@ justify-content: center;
     border-radius: 16px;
     background: rgba(255, 223, 0, 0.05);
 }
-/* footer-------------- */
-.banner-2 {
+/* footer------------------------------------------------------- */
+#myfooter {
+    width: 100%;
+    height: 300px;
     background-image: url(../assets/handshake.jpg);
-    width: 1000px;
-    height: 180px;
-    justify-content: center;
-    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 64px 48px 64px 48px;
     position: relative;
-
+    overflow: hidden;
 }
+
+
 .banner-content {
-    width: calc(100% - 300px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     text-align: center;
+    background: rgba(0, 0, 0, .2);
 }
 .footer-title {
     color: rgb(255, 255, 255);
@@ -232,6 +241,7 @@ justify-content: center;
     letter-spacing: 0%;
     text-align: center;
     padding-top: 16px;
+    margin-top: 50px;
 }
 .footer-description {
     color: rgb(255, 255, 255);
@@ -244,94 +254,39 @@ justify-content: center;
     border-radius: 0.7px;
     padding-top: 24px;
 }
-.banner-2 .banner-content from {
+#myfooter .banner-content .search {
     display: flex;
-    padding-top: 24px;
+    padding-top: 50px;
+    justify-content: center;
 }
-.banner-2 .banner-content input {
+#myfooter .banner-content input {
     box-sizing: border-box;
     border: 1px solid rgba(13, 19, 33, 0.15);
     background: rgb(255, 255, 255);
-    padding: 19px 20px 19px 20px;
+    padding: 20px 93px 19px 30px;
     border-radius: 8px;
     border: none;
+    margin-right: 16px;
 }
-.banner-2 .banner-content button {
+#myfooter .banner-content button {
     padding: 17px 20px 17px 20px;
     background: rgb(255, 255, 255);
     border-radius: 8px;
     border: none;
 }
-
-
-/* .footer-banner {
-    background-image: url(../assets/handshake.jpg);
-    padding: 64px 48px 64px 48px;
-    background-repeat: repeat-y;
-    height: 200px;
-    
-    
-}
-.footer-title{
-    color: rgb(255, 255, 255);
-    font-family: Azeret Mono;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 36px;
-    letter-spacing: 0%;
-    text-align: center;
-}
-.footer-description {
-    color: rgb(255, 255, 255);
-    font-family: Azeret Mono;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0%;
-    text-align: center;
-    opacity: 0.7;
-    margin-top: 16px;
-    
-}
-.banner {
-    position: relative;
+/* ---------------------------------------------------- */
+.footer-end{
     width: 100%;
-    height: 100%;
+    margin-top: 20px;
+    border-radius: 16px;
+    background: rgba(13, 19, 33, 0.03);   
 }
-.banner img {
-    width: 100%;
-    height: 100%;
+.footer-container{
+    
+    padding: 32px 180px 32px 180px;
+    display: flex;   
+    justify-content: end;
 }
-.content {
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+.footer-container .footer-con {
+    margin-right: 25px;
 }
-.content h1{
-
-}
-.content form {
-    display: flex;
-    justify-content: center;
-}
-.content input {
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-
-}
-.content button {
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    cursor: pointer;
-} */
