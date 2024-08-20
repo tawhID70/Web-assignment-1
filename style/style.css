@@ -58,6 +58,8 @@ main{
     letter-spacing: 0%;
     text-align: center;
     margin-bottom: 30px;
+    opacity: 0.7;
+
 }
 .btn-container {
     text-align: center;
@@ -86,16 +88,8 @@ main{
     padding-top: 110px;
     padding-bottom: 90px;
 }
-.frame .subtion {
-    /* display: flex;
-    justify-content: center;
-    text-align: center;
-    border-radius: 16px;
-    background: rgba(13, 19, 33, 0.02);
-    padding-top: 110px;
-    padding-bottom: 90px; */
 
-}
+
 .frame .section .subtitle {
     color: rgb(13, 19, 33);
     font-family: Azeret Mono;
@@ -138,7 +132,6 @@ hr {
 #frame-2 .items {
     position: static;
     width: 850px;
-    /* height: 240px; */
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -148,7 +141,6 @@ hr {
 #frame-2 .items .item-td {
     position: static;
     width: 500px;
-    /* height: 160px; */
     display: flex;
     text-align: left;
     font-size: ;
@@ -179,6 +171,7 @@ hr {
     border: 1px solid rgb(13, 19, 33);
     opacity: 0.7;
     padding: 10px 30px 10px 30px;
+    margin-top: 10px;
 
 }
 .item-V {
@@ -187,29 +180,139 @@ hr {
     justify-content: center;
     display: flex;
 }
-/* .skills--------- */
-.skills {
-    width: 1100px;
-justify-content: center;
+
+
+
+#ch {
+    display: none;
 }
-.skills-container {
-    display: flex;
-    gap: 30px;
-    text-align: left;
+#ch:checked ~ .content {
+    display: block;
+}
+#ch:checked ~ label {
+    display: none;
+}
+.content {
+    display: none;
+}
+.frame label {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgb(13, 19, 33);
+    opacity: 0.7;
+    padding: 10px 30px 10px 30px;
+}
+
+.check-box {
+    display: none;
+}
+
+.check-box:checked + .check-box_label {
 
 }
-.skills-section-1{
+.check-box:checked ~ .content {
+    display: block;
+}
+.check-box_label {
+    cursor: pointer;
+    display: block;
+    margin-top: 12px;
+}
+
+
+/* -----------------------------.skills---------------------------------------- */
+
+
+.skills {
+    /* width: 1100px; */
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills .skills-container {
+    /* width: 90%; */
+    display: flex;
+    gap: 24px;
+    text-align: left;
+}
+
+.skills .skills-section-1{
+    text-align: left;
     border-radius: 16px;
     background: rgba(255, 76, 30, 0.05);
+    padding: 40px 40px 40px 40px;
 }
-.skills-section-2 {
+
+.skills .skills-section-2 {
     border-radius: 16px;
     background: rgba(0, 76, 232, 0.05);
+    padding: 40px 40px 40px 40px;
 }
-.skills-section-3 {
+
+.skills .skills-section-3 {
     border-radius: 16px;
     background: rgba(255, 223, 0, 0.05);
+    padding: 40px 40px 40px 40px;
 }
+
+.skills h3 {
+    color: rgb(13, 19, 33);
+    font-family: Azeret Mono;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: 0%;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+.skills p {
+    color: rgb(13, 19, 33);
+    font-family: Azeret Mono;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0%;
+    text-align: left;
+    opacity: 0.7;
+}
+.skills .btn-container {
+    margin-top: 24px;
+}
+
+.check {
+    display: none;
+}
+.skills .content {
+    display: none;
+    margin-top: 10px;
+}
+.check:checked ~ .check-label {
+    /* color: #007bff; */
+
+}
+.check:checked ~ .content {
+    display: block;
+}
+.check-label {
+    cursor: pointer;
+    display: block;
+    margin-top: 10px;
+    text-decoration-line: underline;
+    /* padding: 10px 30px 10px 30px; */
+    color: rgb(13, 19, 33);
+    font-family: Azeret Mono;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+
+
 /* footer------------------------------------------------------- */
 #myfooter {
     width: 100%;
@@ -281,11 +384,24 @@ justify-content: center;
     border-radius: 16px;
     background: rgba(13, 19, 33, 0.03);   
 }
+.footer-end p {
+    color: rgb(13, 19, 33);
+    font-family: Azeret Mono;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
 .footer-container{
-    
     padding: 32px 180px 32px 180px;
+    justify-content: space-between;
     display: flex;   
-    justify-content: end;
+}
+.footer-icon {
+    display: flex;   
+
 }
 .footer-container .footer-con {
     margin-right: 25px;
